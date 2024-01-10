@@ -32,6 +32,10 @@ aside {
       gap: 1rem;
       flex-wrap: wrap;
 
+      @media(max-width: 768px) {
+        width: 100%;
+      }
+
       .card {
         background-color: #042940;
         padding: 0.5rem;
@@ -43,6 +47,10 @@ aside {
       width: 50%;
       display: flex;
       justify-content: center;
+
+      @media(max-width: 768px) {
+        display: none;
+      }
     }
   }
 }

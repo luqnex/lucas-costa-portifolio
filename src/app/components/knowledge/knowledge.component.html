@@ -3,7 +3,11 @@
     <h2>Conhecimentos</h2>
     <div class="container-content">
       <div class="container-cards">
-        <div class="card">
+        <div
+          class="card"
+          (mouseenter)="handleSetDescription('html')"
+          (mouseleave)="handleSetDescription('')"
+        >
           <img src="../../../assets/Html5.png" alt="HTML 5" />
         </div>
         <div class="card">
@@ -36,7 +40,10 @@
         </div>
       </div>
       <div class="container-description">
-        <p>*Passe o mouse sobre um icone para saber mais*</p>
+        <p *ngIf="description; else WithoutDescription">{{ description }}</p>
+        <ng-template #WithoutDescription>
+          <p>*Passe o mouse sobre um icone para saber mais*</p>
+        </ng-template>
       </div>
     </div>
   </div>

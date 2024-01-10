@@ -4,6 +4,10 @@ aside {
   justify-content: center;
   align-items: center;
   padding: 0 1rem 6rem 1rem;
+
+  @media(max-width: 768px) {
+    padding-top: 3rem;
+  }
 }
 
 .container {
@@ -14,12 +18,29 @@ aside {
   gap: 4rem;
   justify-content: space-between;
 
+  @media(max-width: 768px) {
+    flex-direction: column;
+  }
+
   img {
     width: 40%;
+
+    @media(max-width: 768px) {
+      width: 60%;
+    }
+
+    @media(max-width: 425px) {
+      width: 100%;
+    }
   }
 
   .container-content {
     width: 60%;
+
+    @media(max-width: 768px) {
+      width: 100%;
+      text-align: center;
+    }
 
     h3 {
       font-size: 1.5rem;
@@ -46,6 +67,10 @@ aside {
     .social-media {
       display: flex;
       gap: 1rem;
+
+      @media(max-width: 768px) {
+        justify-content: center;
+      }
 
       .icon {
         font-size: 24px;
