@@ -10,4 +10,5 @@ import { ButtonComponent } from '../button/button.component';
 })
 export class ProjectsComponent {
   buttonText: string = 'Ver mais';
+  linkToGithub: string = 'https://github.com/luqnex';
 }

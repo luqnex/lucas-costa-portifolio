@@ -7,8 +7,13 @@ $green-01: #DBF227;
   box-sizing: border-box;
   color: #FFF;
   font-family: 'Archivo', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: $background;
+}
+
+a {
+  text-decoration: none;
 }

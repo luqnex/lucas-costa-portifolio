@@ -10,4 +10,5 @@ import { ButtonComponent } from '../button/button.component';
 })
 export class MainComponent {
   buttonText: string = 'Instagram';
+  instagramLink: string = 'https://www.instagram.com/lucass.ljc/';
 }
