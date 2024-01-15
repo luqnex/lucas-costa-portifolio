@@ -3,6 +3,7 @@ import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import {
   bootstrapInstagram,
   bootstrapLinkedin,
+  bootstrapGithub,
 } from '@ng-icons/bootstrap-icons';
 
 @Component({
@@ -11,6 +12,8 @@ import {
   imports: [NgIconComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
-  viewProviders: [provideIcons({ bootstrapInstagram, bootstrapLinkedin })],
+  viewProviders: [
+    provideIcons({ bootstrapInstagram, bootstrapLinkedin, bootstrapGithub }),
+  ],
 })
 export class AboutComponent {}

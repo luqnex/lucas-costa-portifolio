@@ -3,42 +3,17 @@
     <h2>Conhecimentos</h2>
     <div class="container-content">
       <div class="container-cards">
-        <div
-          class="card"
-          (mouseenter)="handleSetDescription('html')"
-          (mouseleave)="handleSetDescription('')"
-        >
-          <img src="../../../assets/Html5.png" alt="HTML 5" />
-        </div>
-        <div class="card">
-          <img src="../../../assets/Html5.png" alt="HTML 5" />
-        </div>
-        <div class="card">
-          <img src="../../../assets/Html5.png" alt="HTML 5" />
-        </div>
-        <div class="card">
-          <img src="../../../assets/Html5.png" alt="HTML 5" />
-        </div>
-        <div class="card">
-          <img src="../../../assets/Html5.png" alt="HTML 5" />
-        </div>
-
-        <div class="card">
-          <img src="../../../assets/Html5.png" alt="HTML 5" />
-        </div>
-        <div class="card">
-          <img src="../../../assets/Html5.png" alt="HTML 5" />
-        </div>
-        <div class="card">
-          <img src="../../../assets/Html5.png" alt="HTML 5" />
-        </div>
-        <div class="card">
-          <img src="../../../assets/Html5.png" alt="HTML 5" />
-        </div>
-        <div class="card">
-          <img src="../../../assets/Html5.png" alt="HTML 5" />
+        <div *ngFor="let knowledge of listOfKnowledge; let i = index">
+          <div
+            class="card"
+            (mouseenter)="handleSetDescription(knowledge.type)"
+            (mouseleave)="handleSetDescription(null)"
+          >
+            <ng-icon name="{{ knowledge.icon }}" class="icon"></ng-icon>
+          </div>
         </div>
       </div>
+
       <div class="container-description">
         <p *ngIf="description; else WithoutDescription">{{ description }}</p>
         <ng-template #WithoutDescription>

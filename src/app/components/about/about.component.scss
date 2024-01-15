@@ -75,9 +75,10 @@ aside {
       .icon {
         font-size: 24px;
         cursor: pointer;
+        transition: 0.3s;
 
         &:hover {
-          background: #DBF227;
+          color: #DBF227;
         }
       }
     }

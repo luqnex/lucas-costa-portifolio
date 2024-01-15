@@ -28,7 +28,6 @@ aside {
     .container-cards {
       width: 50%;
       display: flex;
-      justify-content: space-between;
       gap: 1rem;
       flex-wrap: wrap;
 
@@ -38,8 +37,18 @@ aside {
 
       .card {
         background-color: #042940;
-        padding: 0.5rem;
+        padding: 1.5rem;
         border-radius: 0.5rem;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        .icon {
+          font-size: 64px;
+          color: #DBF227;
+        }
       }
     }
 
@@ -47,9 +56,15 @@ aside {
       width: 50%;
       display: flex;
       justify-content: center;
+      text-align: center;
+      line-height: 1.5;
 
       @media(max-width: 768px) {
         display: none;
+      }
+
+      p {
+        transition: all 0.3s;
       }
     }
   }
