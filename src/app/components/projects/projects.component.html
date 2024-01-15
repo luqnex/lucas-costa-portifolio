@@ -1,40 +1,54 @@
 <aside id="projects">
   <div class="container">
     <h2>Projetos</h2>
-    <div class="container-cards">
-      <div class="card">
-        <h3>Nome do projeto</h3>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus
-          corrupti saepe laborum, ab, delectus odit eius laboriosam cumque
-          accusantium explicabo maiores consequatur? Perspiciatis consequatur
-          quis doloremque dicta reprehenderit sed velit!
-        </p>
-        <a href="#">Link para github</a>
+
+    <div class="container-imagens">
+      <div class="image-left">
+        <img
+          src="../../../assets/dashboard-github-query.png"
+          alt="Print dashboard github query"
+          (mouseenter)="handleMouseEvent('img-one')"
+        />
+
+        <div
+          class="card"
+          *ngIf="showDetailsImageOne"
+          (mouseleave)="handleMouseEvent('img-one')"
+        >
+          <h3>Dashboard Github query</h3>
+          <a
+            href="https://github.com/luqnex/dashbord-github-query"
+            target="_blank"
+          >
+            <ng-icon name="bootstrapGithub" class="icon"></ng-icon>
+          </a>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Nome do projeto</h3>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus
-          corrupti saepe laborum, ab, delectus odit eius laboriosam cumque
-          accusantium explicabo maiores consequatur? Perspiciatis consequatur
-          quis doloremque dicta reprehenderit sed velit!
-        </p>
-        <a href="#">Link para github</a>
-      </div>
+      <div class="image-right">
+        <img
+          src="../../../assets/conversor-mp4-to-mp3.png"
+          alt="Print conversor mp4 para mp3"
+          (mouseenter)="handleMouseEvent('img-two')"
+        />
 
-      <div class="card">
-        <h3>Nome do projeto</h3>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus
-          corrupti saepe laborum, ab, delectus odit eius laboriosam cumque
-          accusantium explicabo maiores consequatur? Perspiciatis consequatur
-          quis doloremque dicta reprehenderit sed velit!
-        </p>
-        <a href="#">Link para github</a>
+        <div
+          class="card"
+          *ngIf="showDetailsImageTwo"
+          (mouseleave)="handleMouseEvent('img-two')"
+        >
+          <h3>Conversor mp4 para mp3 com FFMPEG</h3>
+          <a
+            href="https://github.com/luqnex/conversor-mp4-tomp3"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ng-icon name="bootstrapGithub" class="icon"></ng-icon>
+          </a>
+        </div>
       </div>
     </div>
+
     <app-button
       [buttonText]="buttonText"
       [buttonLink]="linkToGithub"
