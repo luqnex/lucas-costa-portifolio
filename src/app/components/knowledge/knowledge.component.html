@@ -3,14 +3,13 @@
     <h2>Conhecimentos</h2>
     <div class="container-content">
       <div class="container-cards">
-        <div *ngFor="let knowledge of listOfKnowledge; let i = index">
-          <div
-            class="card"
-            (mouseenter)="handleSetDescription(knowledge.type)"
-            (mouseleave)="handleSetDescription(null)"
-          >
-            <ng-icon name="{{ knowledge.icon }}" class="icon"></ng-icon>
-          </div>
+        <div
+          *ngFor="let knowledge of listOfKnowledge; let i = index"
+          class="card"
+          (mouseenter)="handleSetDescription(knowledge.type)"
+          (mouseleave)="handleSetDescription(null)"
+        >
+          <ng-icon name="{{ knowledge.icon }}" class="icon"></ng-icon>
         </div>
       </div>
 
